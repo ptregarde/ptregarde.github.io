@@ -1,70 +1,3 @@
-body {
-	font-family: 'CircularStd', sans-serif;
-}
-
-.header{
-	color: #f8f8f8;
-	background: url(../images/header.jpg);
-	background-repeat: no-repeat;
-	min-height: 100vh;
-	text-align: center;
-}
-
-.header::after {
-	background-image: linear-gradient(
-						60deg, 
-						rgb(0,0,0), 
-						rgba(0,0,0,0.83) 35%, 
-						rgba(0,0,0,0.57) 40%, 
-						rgba(0,0,0,0.25) 100%
-					);
-	content: '';
-	height: 100%;
-	left: 0;
-	opacity: .55;
-	position: absolute;
-	top: 0;
-	width: 100%;
-	z-index: 50;
-}
-
-.benefit{
-	min-height: 100vh;
-	overflow: hidden;
-	position: relative;
-}
-
-.iphone{
-	background-attachment: fixed;
-	height: 100%;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
-}
-
-#benefitOne .iphone{
-	background: url(../images/iphone-gcash.png) center center no-repeat fixed;
-}
-
-#benefitTwo .iphone{
-	background: url(../images/iphone-convenience.png) center center no-repeat fixed;
-	z-index: 51;
-}
-
-#benefitTwo {
-	background: url(../images/section-bg.jpg);
-}
-
-#benefitTwo::before {
-	background: rgba(0,0,0, 0.5);
-	content: '';
-	height: 100%;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
-}
 
 @-webkit-keyframes fadeFromLeft {
     from {
@@ -242,6 +175,110 @@ body {
     }
 }
 
+@-webkit-keyframes changeScreen {
+    0% {
+        background-image: url(../images/iphone-gcash.png)
+    }
+
+    50% {
+        background-image: url(../images/iphone-gcash.png)
+    }
+}
+
+@-moz-keyframes changeScreen {
+    0% {
+        background-image: url(../images/iphone-gcash.png)
+    }
+
+    50% {
+        background-image: url(../images/iphone-gcash.png)
+    }
+}
+
+@keyframes changeScreen {
+    0% {
+        background-image: url(../images/iphone-gcash.png)
+    }
+
+    50% {
+        background-image: url(../images/iphone-gcash.png)
+    }
+}
+
+body {
+    font-family: 'CircularStd', sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+.header{
+    color: #f8f8f8;
+    background: url(../images/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    text-align: center;
+}
+
+.header::after {
+    background-image: linear-gradient(
+                        60deg, 
+                        rgb(0,0,0), 
+                        rgba(0,0,0,0.83) 35%, 
+                        rgba(0,0,0,0.57) 40%, 
+                        rgba(0,0,0,0.25) 100%
+                    );
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: .55;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.benefit{
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.iphone{
+    background-attachment: fixed;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#benefitOne .iphone{
+    background: url(../images/iphone-platform.png) center center no-repeat fixed;
+    -webkit-animation: changeScreen 10s;
+    -moz-animation: changeScreen 10s;
+    animation: changeScreen 10s;
+}
+
+#benefitTwo .iphone{
+    background: url(../images/iphone-convenience.png) center center no-repeat fixed;
+}
+
+#benefitTwo {
+    background: url(../images/section-bg.jpg);
+}
+
+#benefitTwo::before {
+    background: rgba(0,0,0, 0.5);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
 .benefit.fadeIn .heading{
 	-webkit-animation: fadeFromLeft 0.75s;
 	-moz-animation: fadeFromLeft 0.75s;
@@ -269,7 +306,6 @@ body {
 .benefit .heading,
 .benefit .description {
 	display: none;
-	width: 33%;
 }
 
 #benefitOne .heading,
@@ -283,6 +319,9 @@ body {
 	position: relative;
 }
 
+.description p{
+    font-size: 20px;
+}
 
 .number {
 	border: 1px solid #111244;
@@ -292,6 +331,7 @@ body {
 	height: 70px;
 	text-align: center;
 	width: 70px;
+    
 }
 
 #benefitTwo .number{
