@@ -3,76 +3,79 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>GCash - Buy Load, Pay Bills, Send Money</title>
+	<!-- <title>GCash - Buy Load, Pay Bills, Send Money</title> -->
 	<meta name="description" content="Turn your mobile phone into a virtual wallet. Using the GCash app,you can pay for items and send money at the speed of a text message.">
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/circular-std.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.css">
 </head>
 
 <body>
-	<nav>
-		<div class="container">
-			<div class="float-left">
-				<h1 class="brand">GCash</h1>
-			</div>
-
-		</div>
-	</nav>
-
-	<div class="header">
-		<div class="container">
-			
-		</div>
-	</div>
-
-	<div id="benefitOne" class="benefit fadeOut">
-		<div class="container h-100">
-			<div class="row h-100">
-				<div class="col my-auto">
-					<div class="heading float-left">
-						<div class="number mb-5">1</div>
-						<h1>A central platform for all your needs</h1>
-					</div>				
-				</div>
-
-				<div class="col">
-					<div class="iphone"></div>
-				</div>
-
-
-				<div class="col my-auto">
-
-					<div class="description float-right">
-						<p>GCash lets you buy load, purchase items, send and receive money, pay bills, and more using Globe, TM, or any other network.</p>
+	<div id="fullpage">
+		<div class="header section">
+			<div class="container-fluid h-100">
+				<div class="row h-25 logo m-5 p-5">
+					<div class="col">
 					</div>
-					
+				</div>
+
+				<div class="row h-75 m-5 p-5">
+					<div class="col-5 text-left">
+						<h1>Go cashless on everyday things</h1>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>	
 
-	<div id="benefitTwo" class="benefit fadeOut">
-		<div class="container h-100">
-			<div class="row h-100">
-				<div class="col my-auto">
-					<div class="heading float-left">
-						<div class="number mb-5">2</div>
-						<h1>Cashless transactions for your convenience and security</h1>
+		<div id="benefitOne" class="benefit fadeOut section">
+			<div class="container h-100">
+				<div class="row h-100">
+					<div class="col my-auto">
+						<div class="heading float-left">
+							<div class="number mb-5">1</div>
+							<h1>A central platform for all your needs</h1>
+						</div>				
+					</div>
+
+					<div class="col">
+						<div class="iphone"></div>
+					</div>
+
+
+					<div class="col my-auto">
+
+						<div class="description float-right">
+							<p>GCash lets you buy load, purchase items, send and receive money, pay bills, and more using Globe, TM, or any other network.</p>
+						</div>
+						
 					</div>
 				</div>
+			</div>
+		</div>	
 
-				<div class="col">
-					<div class="iphone"></div>
-				</div>
-
-				<div class="col my-auto">
-					<div class="description float-right">
-						<p> It’s like having your wallet inside your phone, giving you hassle-free transactions while protecting your data. </p>
+		<div id="benefitTwo" class="benefit fadeOut section">
+			<div class="container h-100">
+				<div class="row h-100">
+					<div class="col my-auto">
+						<div class="heading float-left">
+							<div class="number mb-5">2</div>
+							<h1>Cashless transactions for your convenience and security</h1>
+						</div>
 					</div>
-					
-				</div>
-			</div>	
+
+					<div class="col">
+						<div class="iphone"></div>
+					</div>
+
+					<div class="col my-auto">
+						<div class="description float-right">
+							<p> It’s like having your wallet inside your phone, giving you hassle-free transactions while protecting your data. </p>
+						</div>
+						
+					</div>
+				</div>	
+			</div>
 		</div>
 	</div>
 
@@ -83,6 +86,35 @@
 	<script type="text/javascript" src="assets/js/jquery.waypoints.js"></script>
 	<script type="text/javascript" src="assets/js/noframework.waypoints.js"></script>
 	<script type="text/javascript" src="assets/js/main.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.js"></script>
+
+	<script>
+		new fullpage('#fullpage', {
+			//options here
+			autoScrolling:true,
+			scrollBar: true,
+			navigation: true,
+			navigationPosition: 'right',
+			keyboardScrolling: true,
+			controlArrows: true,
+			onLeave: function (origin, destination, direction) {
+			                if (destination.index == 1) {
+			                    $('#fp-nav ul li a.active span').removeClass("active-blue-dots blue-dots").addClass("active-blue-dots");
+			                    $('#fp-nav ul li span').removeClass("active-blue-dots blue-dots").addClass("blue-dots");
+			                }
+
+			                else{
+			                	$('#fp-nav ul li a.active span').removeClass("active-blue-dots blue-dots");
+			                	$('#fp-nav ul li span').removeClass("active-blue-dots blue-dots");
+			                }
+			}
+		});
+
+		//methods
+		fullpage_api.setAllowScrolling(true);
+
+
+	</script>
 
 </body>
 </html>

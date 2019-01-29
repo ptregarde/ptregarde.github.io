@@ -222,7 +222,7 @@ body, html {
     text-align: center;
 }
 
-.header::after {
+.header::before {
     background-image: linear-gradient(
                         60deg, 
                         rgb(0,0,0), 
@@ -237,6 +237,18 @@ body, html {
     position: absolute;
     top: 0;
     width: 100%;
+}
+
+.header .container{
+    position: relative;
+}
+
+.header .logo .col{
+    background: url(../images/logo.png) no-repeat;
+}
+
+.header h1{
+    font-size: 72px;
 }
 
 .benefit{
@@ -334,8 +346,51 @@ body, html {
     
 }
 
-#benefitTwo .number{
+#benefitTwo .number {
 	color: #ffffff;
 	border: 1px solid #ffffff;
+}
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span {
+    background: #fff !important;
+    position: absolute !important;
+}
+
+#fp-nav ul li a span, 
+.fp-slidesNav ul li a span {
+    border: 1px solid #fff !important;
+    background: rgba(0, 0, 0, 0) !important;
+    height: 10px !important;
+    width: 10px !important;
+    border-radius: 50% !important;
+}
+
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span,
+#fp-nav ul li a.active span, 
+.fp-slidesNav ul li a.active span, 
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span {
+    width: 10px !important;
+    height: 10px !important;
+    margin: -2px 0 0 -2px !important;
+}
+
+#fp-nav ul li a.active span.blue-dots {
+    background: #111244 !important;
+    border: 1px solid #111244 !important;
+    position: absolute !important;
 
 }
+
+#fp-nav ul li a span.blue-dots{
+    border: 1px solid #111244 !important;
+    background: rgba(0, 0, 0, 0) !important;
+    height: 10px !important;
+    width: 10px !important;
+    border-radius: 50% !important;
+
+}
+
+
