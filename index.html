@@ -7,8 +7,10 @@
 	<meta name="description" content="Turn your mobile phone into a virtual wallet. Using the GCash app,you can pay for items and send money at the speed of a text message.">
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/circular-std.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 </head>
 
 <body>
@@ -22,7 +24,8 @@
 
 				<div class="row h-75 m-5 p-5">
 					<div class="col-5 text-left">
-						<h1>Go cashless on everyday things</h1>
+						<h1 class="display-4">Go cashless on everyday things</h1>
+						<!-- <h1>Go cashless on everyday things</h1> -->
 					</div>
 				</div>
 			</div>
@@ -70,11 +73,48 @@
 
 					<div class="col my-auto">
 						<div class="description float-right">
-							<p> It’s like having your wallet inside your phone, giving you hassle-free transactions while protecting your data. </p>
+							<p> It’s like having your wallet inside your phone. It offers you hassle-free transactions while keeping your data safe. </p>
 						</div>
 						
 					</div>
 				</div>	
+			</div>
+		</div>
+
+		<div class="section">
+			<div class="container-fluid h-100">
+<!-- 					<div class="row h-40">
+						<div class="col" id="up"></div>
+					</div>
+
+					<div class="row h-60">
+						<div class="col-12 text-center">
+							<h2> Enjoy all-around services at the tip of your fingers! </h2>
+						</div>
+
+						<div class="col-12 text-center">
+							<p> Use GCash for... </p>
+							<figure class="figure">
+								<img src="assets/images/sos.png" class="mx-4">
+							  	<figcaption class="figure-caption text-center mt-4">Emergencies</figcaption>
+							</figure>
+
+							<figure class="figure">
+								<img src="assets/images/to-do-list.png" class="mx-4">
+							  	<figcaption class="figure-caption text-center mt-4">Errands</figcaption>
+							</figure>
+	
+							<figure class="figure">
+								<img src="assets/images/confetti.png" class="mx-4">
+							  	<figcaption class="figure-caption text-center mt-4">Fun</figcaption>
+							</figure>
+	
+						</div>
+					</div> -->
+				<div class="row h-100">
+					<div class="col-5" id="left"></div>		
+					<div class="col-7" id="right"></div>	
+				</div>
 			</div>
 		</div>
 	</div>
@@ -98,23 +138,40 @@
 			keyboardScrolling: true,
 			controlArrows: true,
 			onLeave: function (origin, destination, direction) {
-			                if (destination.index == 1) {
-			                    $('#fp-nav ul li a.active span').removeClass("active-blue-dots blue-dots").addClass("active-blue-dots");
-			                    $('#fp-nav ul li span').removeClass("active-blue-dots blue-dots").addClass("blue-dots");
-			                }
+				if (destination.index == 1 || destination.index == 3) {
+			        $('#fp-nav ul li a.active span').removeClass("active-blue-dots blue-dots").addClass("active-blue-dots");
+			        $('#fp-nav ul li span').removeClass("active-blue-dots blue-dots").addClass("blue-dots");
+			    }
 
-			                else{
-			                	$('#fp-nav ul li a.active span').removeClass("active-blue-dots blue-dots");
-			                	$('#fp-nav ul li span').removeClass("active-blue-dots blue-dots");
-			                }
+			    else{
+			        $('#fp-nav ul li a.active span').removeClass("active-blue-dots blue-dots");
+			        $('#fp-nav ul li span').removeClass("active-blue-dots blue-dots");
+			    }
+
+			    if (origin.index == 3){
+			    	$('.section #left').removeClass("animated slideInDown services-1");
+			    	$('.section #right').removeClass("animated slideInUp");
+			    	$('.section #up').removeClass("animated slideInDown services-1	");
+			    }
+
+			},
+			afterLoad: function (origin, destination, direction) {
+				if (destination.index == 3){
+					$('.section #left').addClass("animated slideInDown services-1");
+					$('.section #right').addClass("animated slideInUp");
+					$('.section #up').addClass("animated slideInDown services-1");
+				}
 			}
 		});
 
 		//methods
 		fullpage_api.setAllowScrolling(true);
 
+		
 
 	</script>
+
+
 
 </body>
 </html>

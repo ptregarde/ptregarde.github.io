@@ -248,7 +248,7 @@ body, html {
 }
 
 .header h1{
-    font-size: 72px;
+    /*font-size: 72px;*/
 }
 
 .benefit{
@@ -292,27 +292,27 @@ body, html {
 }
 
 .benefit.fadeIn .heading{
-	-webkit-animation: fadeFromLeft 0.75s;
-	-moz-animation: fadeFromLeft 0.75s;
-	animation: fadeFromLeft 0.75s;
+	-webkit-animation: fadeInLeft 0.75s;
+	-moz-animation: fadeInLeft 0.75s;
+	animation: fadeInLeft 0.75s;
 }
 
 .benefit.fadeIn .description{
-	-webkit-animation: fadeFromRight 0.75s;
-	-moz-animation: fadeFromRight 0.75s;
-	animation: fadeFromRight 0.75s;
+	-webkit-animation: fadeInRight 0.75s;
+	-moz-animation: fadeInRight 0.75s;
+	animation: fadeInRight 0.75s;
 }
 
 .benefit.fadeOut .heading{
-	-webkit-animation: fadeToLeft 0.75s;
-	-moz-animation: fadeToLeft 0.75s;
-	animation: fadeToLeft 0.75s;
+	-webkit-animation: fadeOutLeft 0.75s;
+	-moz-animation: fadeOutLeft 0.75s;
+	animation: fadeOutLeft 0.75s;
 }
 
 .benefit.fadeOut .description{
-	-webkit-animation: fadeToRight 0.75s;
-	-moz-animation: fadeToRight 0.75s;
-	animation: fadeToRight 0.75s;
+	-webkit-animation: fadeOutRight 0.75s;
+	-moz-animation: fadeOutRight 0.75s;
+	animation: fadeOutRight 0.75s;
 }
 
 .benefit .heading,
@@ -394,3 +394,27 @@ body, html {
 }
 
 
+.services-1 {
+    background: url(../images/services-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.services-1::before{
+    background: rgba(0,0,0, 0.5);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.h-40{
+    height: 40%;
+}
+
+.h-60{
+    height: 60%;
+}
