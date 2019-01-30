@@ -17,12 +17,12 @@
 	<div id="fullpage">
 		<div class="header section">
 			<div class="container-fluid h-100">
-				<div class="row h-25 logo m-5 p-5">
-					<div class="col">
+				<div class="row h-25 logo m-lg-5 p-lg-5">
+					<div class="col col-12">
 					</div>
 				</div>
 
-				<div class="row h-75 m-5 p-5">
+				<div class="row h-75 m-lg-5 p-lg-5">
 					<div class="col-5 text-left">
 						<h1 class="display-4">Go cashless on everyday things</h1>
 						<!-- <h1>Go cashless on everyday things</h1> -->
@@ -45,13 +45,10 @@
 						<div class="iphone"></div>
 					</div>
 
-
 					<div class="col my-auto">
-
 						<div class="description float-right">
 							<p>GCash lets you buy load, purchase items, send and receive money, pay bills, and more using Globe, TM, or any other network.</p>
 						</div>
-						
 					</div>
 				</div>
 			</div>
@@ -112,8 +109,39 @@
 						</div>
 					</div> -->
 				<div class="row h-100">
-					<div class="col-5" id="left"></div>		
-					<div class="col-7" id="right"></div>	
+					<div class="col-5" id="left">
+						
+					</div>		
+
+					<div class="col-7" id="right">
+						<div class="row h-25">
+							<div id="intro" class="col text-center my-auto d-block">
+								<h2> Enjoy all-around services at the tip of your fingers! </h2>
+							</div>
+
+							<div id="emergency" class="col text-center my-auto d-none">
+								<h2> 1 </h2>
+							</div>
+
+							<div id="errand" class="col text-center my-auto d-none">
+								<h2> 2 </h2>
+							</div>
+
+							<div id="fun" class="col text-center my-auto d-none">
+								<h2> 3 </h2>
+							</div>
+						</div>
+
+						<div class="row h-75">
+							<div class="col d-flex align-items-end justify-content-center pb-5">
+								<img id="button1" class="btn" src="https://placehold.it/200x200">
+								<img id="button2" class="btn" src="https://placehold.it/200x200">
+								<img id="button3" class="btn" src="https://placehold.it/200x200">
+								<img id="button4" class="btn" src="https://placehold.it/200x200">	
+							</div>
+						</div>	
+							
+					</div>
 				</div>
 			</div>
 		</div>
@@ -125,10 +153,11 @@
 	<script type="text/javascript" src="assets/js/bootstrap/bootstrap.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.waypoints.js"></script>
 	<script type="text/javascript" src="assets/js/noframework.waypoints.js"></script>
-	<script type="text/javascript" src="assets/js/main.js"></script>
+	<!-- <script type="text/javascript" src="assets/js/main.js"></script> -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.js"></script>
 
 	<script>
+
 		new fullpage('#fullpage', {
 			//options here
 			autoScrolling:true,
@@ -137,6 +166,7 @@
 			navigationPosition: 'right',
 			keyboardScrolling: true,
 			controlArrows: true,
+			responsiveWidth: 768,
 			onLeave: function (origin, destination, direction) {
 				if (destination.index == 1 || destination.index == 3) {
 			        $('#fp-nav ul li a.active span').removeClass("active-blue-dots blue-dots").addClass("active-blue-dots");
@@ -149,26 +179,70 @@
 			    }
 
 			    if (origin.index == 3){
-			    	$('.section #left').removeClass("animated slideInDown services-1");
-			    	$('.section #right').removeClass("animated slideInUp");
-			    	$('.section #up').removeClass("animated slideInDown services-1	");
+			    	$('.section #left').removeClass().addClass("col-5");
+			    	$('.section #right').removeClass().addClass("col-7");
+			    	// $('.section #up').removeClass("animated slideInDown services-1	");
 			    }
 
+			    $('.benefit').removeClass('fadeIn').addClass('fadeOut').find('.heading, .description').delay(500).hide(0);
 			},
+
 			afterLoad: function (origin, destination, direction) {
 				if (destination.index == 3){
-					$('.section #left').addClass("animated slideInDown services-1");
+					$('.section #left').removeClass().addClass("col-5 animated slideInDown services-1");
 					$('.section #right').addClass("animated slideInUp");
-					$('.section #up').addClass("animated slideInDown services-1");
+					// $('.section #up').addClass("animated slideInDown services-1");
+
+					window.setTimeout( function(){
+					    $('.section #left').removeClass("animated slideInDown");
+					    $('.section #right').removeClass("animated slideInUp");
+					    // $('.section #up').removeClass("animated slideInDown	");
+					}, 2000);
 				}
+
+				$('.benefit').removeClass('fadeOut').addClass('fadeIn').find('.heading, .description').show();
 			}
 		});
 
 		//methods
 		fullpage_api.setAllowScrolling(true);
+	</script>
 
+	<script type="text/javascript">
+		document.getElementById("button1").onclick = function() { displayService("emergency", "services-2") };
+		document.getElementById("button2").onclick = function() { displayService("errand", "services-3") };
+		document.getElementById("button3").onclick = function() { displayService("fun", "services-4") };
+		document.getElementById("button4").onclick = function() { displayService("intro", "services-1") };
+
+		function displayService(elId, className){
+			$("#right div.d-block").removeClass("d-block").addClass("d-none");
+		 	$('#' + elId).addClass("d-block");
+		 	$("#left").removeClass().addClass(className + " col-5 animated slideInLeft");	
+
+		 	window.setTimeout( function(){
+		 	    $('.section #left').removeClass("animated slideInLeft");
+		 	    $('.section #right').removeClass("animated slideInUp");
+		 	    // $('.section #up').removeClass("animated slideInDown");
+		 	}, 800);		
+		}
 		
-
+		// $("#button1").click(function(){
+		// 	$("#right div.d-block").removeClass("d-block").addClass("d-none");
+		//  	$("#emergency").addClass("d-block");
+		//  	$("#left").addClass("services-2 animated slideInDown");
+		// });
+		// $("#button2").click(function(){
+		// 	$("#right div.d-block").removeClass("d-block").addClass("d-none");
+		//  	$("#errand").addClass("d-block");
+		// });
+		// $("#button3").click(function(){
+		// 	$("#right div.d-block").removeClass("d-block").addClass("d-none");
+		//  	$("#fun").addClass("d-block");
+		// });
+		// $("#button4").click(function(){
+		// 	$("#right div.d-block").removeClass("d-block").addClass("d-none");
+		//  	$("#intro").addClass("d-block");
+		// });
 	</script>
 
 

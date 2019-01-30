@@ -215,9 +215,7 @@ body, html {
 
 .header{
     color: #f8f8f8;
-    background: url(../images/header.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url(../images/header.jpg) center/cover no-repeat;
     height: 100%;
     text-align: center;
 }
@@ -292,32 +290,27 @@ body, html {
 }
 
 .benefit.fadeIn .heading{
-	-webkit-animation: fadeInLeft 0.75s;
-	-moz-animation: fadeInLeft 0.75s;
-	animation: fadeInLeft 0.75s;
+	-webkit-animation: fadeFromLeft 0.25s;
+	-moz-animation: fadeFromLeft 0.25s;
+	animation: fadeFromLeft 0.25s;
 }
 
 .benefit.fadeIn .description{
-	-webkit-animation: fadeInRight 0.75s;
-	-moz-animation: fadeInRight 0.75s;
-	animation: fadeInRight 0.75s;
+	-webkit-animation: fadeFromRight 0.25s;
+	-moz-animation: fadeFromRight 0.25s;
+	animation: fadeFromRight 0.25s;
 }
 
 .benefit.fadeOut .heading{
-	-webkit-animation: fadeOutLeft 0.75s;
-	-moz-animation: fadeOutLeft 0.75s;
-	animation: fadeOutLeft 0.75s;
+	-webkit-animation: fadeToLeft 0.25s;
+	-moz-animation: fadeToLeft 0.25s;
+	animation: fadeToLeft 0.25s;
 }
 
 .benefit.fadeOut .description{
-	-webkit-animation: fadeOutRight 0.75s;
-	-moz-animation: fadeOutRight 0.75s;
-	animation: fadeOutRight 0.75s;
-}
-
-.benefit .heading,
-.benefit .description {
-	display: none;
+	-webkit-animation: fadeToRight 0.25s;
+	-moz-animation: fadeToRight 0.25s;
+	animation: fadeToRight 0.25s;
 }
 
 #benefitOne .heading,
@@ -409,6 +402,18 @@ body, html {
     position: absolute;
     top: 0;
     width: 100%;
+}
+
+.services-2{
+    background: lightblue;
+}
+
+.services-3{
+    background: grey;
+}
+
+.services-4{
+    background: antiquewhite;
 }
 
 .h-40{

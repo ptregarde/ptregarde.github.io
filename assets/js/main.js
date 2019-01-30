@@ -4,7 +4,7 @@
   var $window  = $(window);
 
   function sectionWaypoints() {
-    if ($window.width() >= 960) {
+    if ($window.width() >= 768) {
       $('.benefit').waypoint(function(direction) {
         if (direction === 'down') {
           $(this.element)
