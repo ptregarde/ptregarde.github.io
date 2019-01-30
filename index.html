@@ -80,34 +80,6 @@
 
 		<div class="section">
 			<div class="container-fluid h-100">
-<!-- 					<div class="row h-40">
-						<div class="col" id="up"></div>
-					</div>
-
-					<div class="row h-60">
-						<div class="col-12 text-center">
-							<h2> Enjoy all-around services at the tip of your fingers! </h2>
-						</div>
-
-						<div class="col-12 text-center">
-							<p> Use GCash for... </p>
-							<figure class="figure">
-								<img src="assets/images/sos.png" class="mx-4">
-							  	<figcaption class="figure-caption text-center mt-4">Emergencies</figcaption>
-							</figure>
-
-							<figure class="figure">
-								<img src="assets/images/to-do-list.png" class="mx-4">
-							  	<figcaption class="figure-caption text-center mt-4">Errands</figcaption>
-							</figure>
-	
-							<figure class="figure">
-								<img src="assets/images/confetti.png" class="mx-4">
-							  	<figcaption class="figure-caption text-center mt-4">Fun</figcaption>
-							</figure>
-	
-						</div>
-					</div> -->
 				<div class="row h-100">
 					<div class="col-5" id="left">
 						
@@ -120,7 +92,7 @@
 							</div>
 
 							<div id="emergency" class="col text-center my-auto d-none">
-								<h2> 1 </h2>
+								<h2> Emergency </h2>
 							</div>
 
 							<div id="errand" class="col text-center my-auto d-none">
@@ -132,12 +104,15 @@
 							</div>
 						</div>
 
-						<div class="row h-75">
+						<div class="row h-75 align-items-end pb-4">
 							<div class="col d-flex align-items-end justify-content-center pb-5">
-								<img id="button1" class="btn" src="https://placehold.it/200x200">
-								<img id="button2" class="btn" src="https://placehold.it/200x200">
-								<img id="button3" class="btn" src="https://placehold.it/200x200">
-								<img id="button4" class="btn" src="https://placehold.it/200x200">	
+								<div class="circle rounded-circle d-none">
+									<img id="button1" class="btn mx-auto d-block my-2 active" src="assets/images/phone.png">
+								</div>
+
+								<img id="button2" class="btn mx-3" src="assets/images/money.png">
+								<img id="button3" class="btn mx-3" src="assets/images/bill.png">
+								<img id="button4" class="btn mx-3" src="assets/images/movie.png">	
 							</div>
 						</div>	
 							
@@ -153,7 +128,7 @@
 	<script type="text/javascript" src="assets/js/bootstrap/bootstrap.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.waypoints.js"></script>
 	<script type="text/javascript" src="assets/js/noframework.waypoints.js"></script>
-	<!-- <script type="text/javascript" src="assets/js/main.js"></script> -->
+	<script type="text/javascript" src="assets/js/main.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.js"></script>
 
 	<script>
@@ -181,26 +156,24 @@
 			    if (origin.index == 3){
 			    	$('.section #left').removeClass().addClass("col-5");
 			    	$('.section #right').removeClass().addClass("col-7");
-			    	// $('.section #up').removeClass("animated slideInDown services-1	");
+
+			    	$("#right div.d-block").removeClass("d-block").add("d-none");
+			    	$("#right #intro").addClass("d-block");
 			    }
 
-			    $('.benefit').removeClass('fadeIn').addClass('fadeOut').find('.heading, .description').delay(500).hide(0);
 			},
 
 			afterLoad: function (origin, destination, direction) {
 				if (destination.index == 3){
 					$('.section #left').removeClass().addClass("col-5 animated slideInDown services-1");
 					$('.section #right').addClass("animated slideInUp");
-					// $('.section #up').addClass("animated slideInDown services-1");
 
 					window.setTimeout( function(){
 					    $('.section #left').removeClass("animated slideInDown");
 					    $('.section #right').removeClass("animated slideInUp");
-					    // $('.section #up').removeClass("animated slideInDown	");
 					}, 2000);
 				}
 
-				$('.benefit').removeClass('fadeOut').addClass('fadeIn').find('.heading, .description').show();
 			}
 		});
 
@@ -209,10 +182,10 @@
 	</script>
 
 	<script type="text/javascript">
-		document.getElementById("button1").onclick = function() { displayService("emergency", "services-2") };
-		document.getElementById("button2").onclick = function() { displayService("errand", "services-3") };
-		document.getElementById("button3").onclick = function() { displayService("fun", "services-4") };
-		document.getElementById("button4").onclick = function() { displayService("intro", "services-1") };
+		document.getElementById("button1").onclick = function() { displayService("intro", "services-1") };
+		document.getElementById("button2").onclick = function() { displayService("emergency", "services-2") };
+		document.getElementById("button3").onclick = function() { displayService("errand", "services-3") };
+		document.getElementById("button4").onclick = function() { displayService("fun", "services-4") };
 
 		function displayService(elId, className){
 			$("#right div.d-block").removeClass("d-block").addClass("d-none");
@@ -225,24 +198,7 @@
 		 	    // $('.section #up').removeClass("animated slideInDown");
 		 	}, 800);		
 		}
-		
-		// $("#button1").click(function(){
-		// 	$("#right div.d-block").removeClass("d-block").addClass("d-none");
-		//  	$("#emergency").addClass("d-block");
-		//  	$("#left").addClass("services-2 animated slideInDown");
-		// });
-		// $("#button2").click(function(){
-		// 	$("#right div.d-block").removeClass("d-block").addClass("d-none");
-		//  	$("#errand").addClass("d-block");
-		// });
-		// $("#button3").click(function(){
-		// 	$("#right div.d-block").removeClass("d-block").addClass("d-none");
-		//  	$("#fun").addClass("d-block");
-		// });
-		// $("#button4").click(function(){
-		// 	$("#right div.d-block").removeClass("d-block").addClass("d-none");
-		//  	$("#intro").addClass("d-block");
-		// });
+
 	</script>
 
 

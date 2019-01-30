@@ -405,15 +405,22 @@ body, html {
 }
 
 .services-2{
-    background: lightblue;
+    background: url(../images/send-money.jpg);
+    /*background: url(../images/send-money2.png);*/
+    background-size: cover;
+    background-position: center;
 }
 
 .services-3{
-    background: grey;
+    background: url(../images/pay-bills.jpg);
+    background-size: cover;
+    background-position: 70%;
 }
 
 .services-4{
-    background: antiquewhite;
+    background: url(../images/book-movies.jpg);
+    background-size: cover;
+    background-position: 70%;
 }
 
 .h-40{
@@ -422,4 +429,15 @@ body, html {
 
 .h-60{
     height: 60%;
+}
+
+img.btn{
+    width: 90px;
+}
+
+.circle{
+    border: 1px solid #48aee0;
+    background-color: #48aee0;
+    height: 100px;
+    width: 100px;
 }
