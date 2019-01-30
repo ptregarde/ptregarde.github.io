@@ -438,6 +438,44 @@ img.btn{
 .circle{
     border: 1px solid #48aee0;
     background-color: #48aee0;
-    height: 100px;
-    width: 100px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
 }
+
+.icon{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+
+#button1, 
+#button2, 
+#button3, 
+#button4 {
+    position: relative;
+}
+
+#right{
+    background-color: #f5fffa;
+
+}
+
+
+@media (max-width: 992px) { 
+
+    .header .logo .col{
+       background-position: center;
+       background-size: 50%;
+    }
+
+
+    .iphone{
+        background-attachment: scroll;
+    }
+}
+
+
+
