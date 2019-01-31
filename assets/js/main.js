@@ -13,7 +13,7 @@
           .find('.heading, .description')
           .show();
         }
-      }, { offset: '50%' })
+      }, { offset: '20%' })
       $('.benefit').waypoint(function(direction) {
         if (direction === 'up') {
           $(this.element)
@@ -24,6 +24,9 @@
           .hide(0);
         }
       }, { offset: '20%' });
+    }
+    else{
+
     }
   }
 

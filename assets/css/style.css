@@ -177,31 +177,31 @@
 
 @-webkit-keyframes changeScreen {
     0% {
-        background-image: url(../images/iphone-gcash.png)
+        background-image: url(../images/screen-gcash-370.png)
     }
 
     50% {
-        background-image: url(../images/iphone-gcash.png)
+        background-image: url(../images/screen-gcash-370.png)
     }
 }
 
 @-moz-keyframes changeScreen {
     0% {
-        background-image: url(../images/iphone-gcash.png)
+        background-image: url(../images/screen-gcash-370.png)
     }
 
     50% {
-        background-image: url(../images/iphone-gcash.png)
+        background-image: url(../images/screen-gcash-370.png)
     }
 }
 
 @keyframes changeScreen {
     0% {
-        background-image: url(../images/iphone-gcash.png)
+        background-image: url(../images/screen-gcash-370.png)
     }
 
     50% {
-        background-image: url(../images/iphone-gcash.png)
+        background-image: url(../images/screen-gcash-370.png)
     }
 }
 
@@ -265,14 +265,14 @@ body, html {
 }
 
 #benefitOne .iphone{
-    background: url(../images/iphone-platform.png) center center no-repeat fixed;
+    background: url(../images/screen-platform-370.png) center center no-repeat fixed;
     -webkit-animation: changeScreen 10s;
     -moz-animation: changeScreen 10s;
     animation: changeScreen 10s;
 }
 
 #benefitTwo .iphone{
-    background: url(../images/iphone-convenience.png) center center no-repeat fixed;
+    background: url(../images/screen-convenience-370.png) center center no-repeat fixed;
 }
 
 #benefitTwo {
@@ -289,28 +289,33 @@ body, html {
     width: 100%;
 }
 
+.benefit .heading, 
+.benefit .description{
+    display: none;
+}
+
 .benefit.fadeIn .heading{
-	-webkit-animation: fadeFromLeft 0.25s;
-	-moz-animation: fadeFromLeft 0.25s;
-	animation: fadeFromLeft 0.25s;
+	-webkit-animation: fadeFromLeft 0.75s;
+	-moz-animation: fadeFromLeft 0.75s;
+	animation: fadeFromLeft 0.75s;
 }
 
 .benefit.fadeIn .description{
-	-webkit-animation: fadeFromRight 0.25s;
-	-moz-animation: fadeFromRight 0.25s;
-	animation: fadeFromRight 0.25s;
+	-webkit-animation: fadeFromRight 0.75s;
+	-moz-animation: fadeFromRight 0.75s;
+	animation: fadeFromRight 0.75s;
 }
 
 .benefit.fadeOut .heading{
-	-webkit-animation: fadeToLeft 0.25s;
-	-moz-animation: fadeToLeft 0.25s;
-	animation: fadeToLeft 0.25s;
+	-webkit-animation: fadeToLeft 0.75s;
+	-moz-animation: fadeToLeft 0.75s;
+	animation: fadeToLeft 0.75s;
 }
 
 .benefit.fadeOut .description{
-	-webkit-animation: fadeToRight 0.25s;
-	-moz-animation: fadeToRight 0.25s;
-	animation: fadeToRight 0.25s;
+	-webkit-animation: fadeToRight 0.75s;
+	-moz-animation: fadeToRight 0.75s;
+	animation: fadeToRight 0.75s;
 }
 
 #benefitOne .heading,
@@ -335,8 +340,7 @@ body, html {
 	font-size: 48px;
 	height: 70px;
 	text-align: center;
-	width: 70px;
-    
+	width: 70px; 
 }
 
 #benefitTwo .number {
@@ -473,8 +477,28 @@ img.btn{
 
 
     .iphone{
-        background-attachment: scroll;
+        background-attachment: scroll !important;
+        position: relative;
+        background-size: 78% !important;
+        height: 80vh;
+        width: auto;
     }
+
+    .benefit .heading, 
+    .benefit .description{
+        display: block;
+    }
+
+    .heading h1{
+        font-size: 32px;
+    }
+
+    .description p{
+        font-size: 16px;
+        font-weight: 100;
+    }
+
+
 }
 
 
