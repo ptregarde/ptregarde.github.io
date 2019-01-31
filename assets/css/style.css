@@ -177,31 +177,31 @@
 
 @-webkit-keyframes changeScreen {
     0% {
-        background-image: url(../images/screen-gcash-370.png)
+        background-image: url(../images/screen-gcash-270.png)
     }
 
     50% {
-        background-image: url(../images/screen-gcash-370.png)
+        background-image: url(../images/screen-gcash-270.png)
     }
 }
 
 @-moz-keyframes changeScreen {
     0% {
-        background-image: url(../images/screen-gcash-370.png)
+        background-image: url(../images/screen-gcash-270.png)
     }
 
     50% {
-        background-image: url(../images/screen-gcash-370.png)
+        background-image: url(../images/screen-gcash-270.png)
     }
 }
 
 @keyframes changeScreen {
     0% {
-        background-image: url(../images/screen-gcash-370.png)
+        background-image: url(../images/screen-gcash-270.png)
     }
 
     50% {
-        background-image: url(../images/screen-gcash-370.png)
+        background-image: url(../images/screen-gcash-270.png)
     }
 }
 
@@ -215,19 +215,13 @@ body, html {
 
 .header{
     color: #f8f8f8;
-    background: url(../images/header.jpg) center/cover no-repeat;
+    background: url(../images/main-header.jpg) center/cover no-repeat;
     height: 100%;
     text-align: center;
 }
 
 .header::before {
-    background-image: linear-gradient(
-                        60deg, 
-                        rgb(0,0,0), 
-                        rgba(0,0,0,0.83) 35%, 
-                        rgba(0,0,0,0.57) 40%, 
-                        rgba(0,0,0,0.25) 100%
-                    );
+    background: rgba(0,0,0,0.5);
     content: '';
     height: 100%;
     left: 0;
@@ -265,14 +259,14 @@ body, html {
 }
 
 #benefitOne .iphone{
-    background: url(../images/screen-platform-370.png) center center no-repeat fixed;
+    background: url(../images/screen-platform-270.png) center center no-repeat fixed;
     -webkit-animation: changeScreen 10s;
     -moz-animation: changeScreen 10s;
     animation: changeScreen 10s;
 }
 
 #benefitTwo .iphone{
-    background: url(../images/screen-convenience-370.png) center center no-repeat fixed;
+    background: url(../images/screen-convenience-270.png) center center no-repeat fixed;
 }
 
 #benefitTwo {
@@ -410,7 +404,6 @@ body, html {
 
 .services-2{
     background: url(../images/send-money.jpg);
-    /*background: url(../images/send-money2.png);*/
     background-size: cover;
     background-position: center;
 }
@@ -425,6 +418,10 @@ body, html {
     background: url(../images/book-movies.jpg);
     background-size: cover;
     background-position: 70%;
+}
+
+.h-10{
+    height: 10%;
 }
 
 .h-40{
@@ -467,6 +464,79 @@ img.btn{
 
 }
 
+#services{
+    background-color: #2f2f2f;
+}
+
+#download{
+    background-color: #f5fffa;   
+}
+
+#download div .col-lg-12{
+    height: 50vh;
+}
+
+#services h2{
+    color: #fff;
+    font-weight: 700;
+    text-transform: lowercase;
+    font-size: 72px;
+    letter-spacing: 18px;
+}
+
+#services h4,
+#services p{
+    color: #fff;
+}
+
+#service-1 .box{
+    background: url(../images/send-money.jpg) center/cover no-repeat;
+}
+
+#service-2 .box{
+    background: url(../images/pay-bills.jpg) 70%/cover no-repeat;
+}
+
+#service-3 .box{
+    background: url(../images/book-movies.jpg) 60%/cover no-repeat;
+}
+
+.box{
+    height: 130%;
+    clip-path: polygon(
+      0% 14%,
+      100% 14%,
+      100% 86%,
+      0% 86%
+    );
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+
+    animation: clipOut 4s;
+    transition: clip-path 1s ease-in, filter 0.5s ease-in;
+}
+
+.box:hover{
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    -webkit-filter: grayscale(0%);
+    filter: none;
+}
+
+.box::before {
+    background: rgba(47,47,47,0.8);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.box:hover::before{
+    background: rgba(0,0,0,0);
+}
+
+
 
 @media (max-width: 992px) { 
 
@@ -475,6 +545,9 @@ img.btn{
        background-size: 50%;
     }
 
+    .header h1{
+        font-weight: 200;
+    }
 
     .iphone{
         background-attachment: scroll !important;
@@ -498,6 +571,13 @@ img.btn{
         font-weight: 100;
     }
 
+    #services h2{
+        color: #fff;
+        font-weight: 400;
+        text-transform: lowercase;
+        font-size: 36px;
+        letter-spacing: normal;
+    }
 
 }
 
