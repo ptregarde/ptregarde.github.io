@@ -285,7 +285,8 @@ body, html {
 
 .benefit .heading, 
 .benefit .description,
-#services p{
+#services p,
+#services ol {
     display: none;
 }
 
@@ -470,7 +471,8 @@ img.btn{
 }
 
 #download{
-    background-color: #f5fffa;   
+    background-color: #f5fffa;
+    padding: 150px 0;   
 }
 
 #download div .col-lg-12{
@@ -537,6 +539,30 @@ img.btn{
     background: rgba(0,0,0,0);
 }
 
+#services ol {
+    list-style: none;
+    counter-reset: custom-counter;
+    flex: wrap;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+#services ol li{
+    counter-increment:  custom-counter;
+    display: flex;
+    width: 80%;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+#services ol li::before{
+    content: "0" counter(custom-counter);
+    font-weight: bold;
+    font-size: 3rem;
+    margin-right: 0.5rem;
+    line-height: 1;
+}
 
 @media (max-width: 992px) { 
 
