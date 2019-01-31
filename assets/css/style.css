@@ -177,31 +177,31 @@
 
 @-webkit-keyframes changeScreen {
     0% {
-        background-image: url(../images/screen-gcash-270.png)
+        background-image: url(../images/screen-gcash-370.png)
     }
 
     50% {
-        background-image: url(../images/screen-gcash-270.png)
+        background-image: url(../images/screen-gcash-370.png)
     }
 }
 
 @-moz-keyframes changeScreen {
     0% {
-        background-image: url(../images/screen-gcash-270.png)
+        background-image: url(../images/screen-gcash-370.png)
     }
 
     50% {
-        background-image: url(../images/screen-gcash-270.png)
+        background-image: url(../images/screen-gcash-370.png)
     }
 }
 
 @keyframes changeScreen {
     0% {
-        background-image: url(../images/screen-gcash-270.png)
+        background-image: url(../images/screen-gcash-370.png)
     }
 
     50% {
-        background-image: url(../images/screen-gcash-270.png)
+        background-image: url(../images/screen-gcash-370.png)
     }
 }
 
@@ -259,14 +259,14 @@ body, html {
 }
 
 #benefitOne .iphone{
-    background: url(../images/screen-platform-270.png) center center no-repeat fixed;
+    background: url(../images/screen-platform-370.png) center center no-repeat fixed;
     -webkit-animation: changeScreen 10s;
     -moz-animation: changeScreen 10s;
     animation: changeScreen 10s;
 }
 
 #benefitTwo .iphone{
-    background: url(../images/screen-convenience-270.png) center center no-repeat fixed;
+    background: url(../images/screen-convenience-370.png) center center no-repeat fixed;
 }
 
 #benefitTwo {
@@ -284,7 +284,8 @@ body, html {
 }
 
 .benefit .heading, 
-.benefit .description{
+.benefit .description,
+#services p{
     display: none;
 }
 
@@ -537,7 +538,6 @@ img.btn{
 }
 
 
-
 @media (max-width: 992px) { 
 
     .header .logo .col{
@@ -579,7 +579,30 @@ img.btn{
         letter-spacing: normal;
     }
 
+    #benefitOne .iphone{
+        background: url(../images/screen-platform-270.png) center center no-repeat fixed;
+        -webkit-animation: changeScreen 10s;
+        -moz-animation: changeScreen 10s;
+        animation: changeScreen 10s;
+    }
+
+    #benefitTwo .iphone{
+        background: url(../images/screen-convenience-270.png) center center no-repeat fixed;
+    }
+
 }
 
 
 
+
+@media (min-width: 768px) and (max-width: 992px){
+    .iphone{
+        background-attachment: scroll !important;
+        position: relative;
+        background-size: 50% !important;
+        height: 80vh;
+        width: auto;
+    }
+
+
+}
