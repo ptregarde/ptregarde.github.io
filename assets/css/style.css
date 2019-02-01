@@ -177,31 +177,31 @@
 
 @-webkit-keyframes changeScreen {
     0% {
-        background-image: url(../images/screen-gcash-370.png)
+        background-image: url(../images/screen-gcash-270.png)
     }
 
     50% {
-        background-image: url(../images/screen-gcash-370.png)
+        background-image: url(../images/screen-gcash-270.png)
     }
 }
 
 @-moz-keyframes changeScreen {
     0% {
-        background-image: url(../images/screen-gcash-370.png)
+        background-image: url(../images/screen-gcash-270.png)
     }
 
     50% {
-        background-image: url(../images/screen-gcash-370.png)
+        background-image: url(../images/screen-gcash-270.png)
     }
 }
 
 @keyframes changeScreen {
     0% {
-        background-image: url(../images/screen-gcash-370.png)
+        background-image: url(../images/screen-gcash-270.png)
     }
 
     50% {
-        background-image: url(../images/screen-gcash-370.png)
+        background-image: url(../images/screen-gcash-270.png)
     }
 }
 
@@ -235,7 +235,7 @@ body, html {
     position: relative;
 }
 
-.header .logo .col#logo{
+.header .logo #logo{
     background: url(../images/logo.png) no-repeat;
     background-position: 0% 50%; 
 }
@@ -256,18 +256,18 @@ body, html {
 }
 
 #benefitOne .iphone{
-    background: url(../images/screen-platform-370.png) center center no-repeat fixed;
+    background: url(../images/screen-platform-270.png) center center no-repeat fixed;
     -webkit-animation: changeScreen 10s;
     -moz-animation: changeScreen 10s;
     animation: changeScreen 10s;
 }
 
 #benefitTwo .iphone{
-    background: url(../images/screen-convenience-370.png) center center no-repeat fixed;
+    background: url(../images/screen-convenience-270.png) center center no-repeat fixed;
 }
 
 #benefitTwo {
-    background: url(../images/section-bg.jpg);
+    background: url(../images/section-bg.jpg) center/cover no-repeat ;
 }
 
 #benefitTwo::before {
@@ -282,8 +282,8 @@ body, html {
 
 .benefit .heading, 
 .benefit .description,
-#services p,
-#services ol {
+#services .desktop p,
+#services .desktop ol {
     display: none;
 }
 
@@ -424,12 +424,12 @@ img.btn{
 
 #download{
     background-color: #f5fffa;
-    padding: 150px 0;   
 }
 
 #download div .col-lg-12{
     height: 50vh;
 }
+
 
 #services h2{
     color: #fff;
@@ -440,7 +440,8 @@ img.btn{
 }
 
 #services h4,
-#services p{
+#services p,
+#services ol{
     color: #fff;
     position: relative;
 }
@@ -465,7 +466,7 @@ img.btn{
     background: url(../images/book-movies.jpg) 60%/cover no-repeat;
 }
 
-.box{
+.box.desktop{
     height: 130%;
     clip-path: polygon(
       0% 14%,
@@ -480,7 +481,7 @@ img.btn{
     transition: clip-path 1s ease-in, filter 0.5s ease-in;
 }
 
-.box:hover{
+.box.desktop:hover{
     clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
     -webkit-filter: grayscale(0%);
     filter: none;
@@ -496,16 +497,16 @@ img.btn{
     width: 100%;
 }
 
-.box:hover::before{
+.box.desktop:hover::before{
     background: rgba(0,0,0,0);
     height: 100%;
 }
 
-.box:hover h4{
+.box.desktop:hover h4{
     font-size: 48px !important;
 }
 
-.box:hover h4{
+.box.desktop:hover h4{
         border-bottom: 2px solid #266BDD;
 
 }
@@ -537,7 +538,7 @@ img.btn{
 }
 
 .text-bg{
-    font-size: 150px;
+    font-size: 120px;
     color: #ccf2ff;
     font-style: italic;
 }
@@ -552,7 +553,7 @@ img.btn{
 
 @media (max-width: 992px) { 
 
-    .header #logo{
+    .header .logo #logo{
        background-position: center;
        background-size: 50%;
     }
@@ -602,19 +603,80 @@ img.btn{
         background: url(../images/screen-convenience-270.png) center center no-repeat fixed;
     }
 
+    .text-bg{
+        font-size: 24px;
+    }
+
+    .text-fg{
+        font-size: 18px;
+    }
+
+    #download p{
+        font-size: 14px;
+    }
+
+    .h-60{
+        height: 100%;
+    }
+
+    .box.mobile{
+        height: 100%;
+    }
+
+    #services .mobile ol li{
+        width: 80%;
+    }
+
 }
-
-
-
 
 @media (min-width: 768px) and (max-width: 992px){
     .iphone{
         background-attachment: scroll !important;
         position: relative;
         background-size: 50% !important;
-        height: 80vh;
+        height: 68vh;
         width: auto;
     }
 
+    .description p{
+        font-size: 22px;
+    }
+
+    #services .mobile ol li{
+        width: 60%;
+    }
+
+    #service-3 .mobile ol li{
+        width: 100%;
+    }
+
+    .text-bg{
+        font-size: 64px;
+    }
+
+    .text-fg{
+        font-size: 24px;
+    }
+
+    #download p{
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px){
+    .iphone{
+        background-size: 35% !important;
+        height: 100vh;
+        width: auto;
+    }
+}
+
+@media (max-width: 576px){
+    .iphone{
+        background-size: 70% !important;
+        height: 80vh;
+        width: auto;
+    }
+}
 
 }

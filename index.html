@@ -19,18 +19,18 @@
 		<div class="header section">
 			<div class="container-fluid h-100">
 				<div class="row h-25 logo m-lg-5 pb-lg-5 px-lg-5 my-5 align-items-center">
-					<div class="col-12 col-lg-6 h-100" id="logo">
+					<div class="col col-lg-6 h-100 col-12" id="logo">
 					</div>
 
-					<div class="col-12 col-lg-6 mx-auto">
+					<div class="col col-lg-6 col-12 mx-auto d-none d-lg-block">
 						<a href="https://twitter.com/gcashofficial" target="_blank">
-							<img src="assets/images/logos/twitter.png" width="32" class="float-right mx-3">	
+							<img src="assets/images/logos/twitter.png" width="32" class="float-none float-lg-right mx-3">	
 						</a>
 						<a href="https://www.instagram.com/gcashofficial/" target="_blank">
-							<img src="assets/images/logos/instagram.png" width="32" class="float-right mx-3">
+							<img src="assets/images/logos/instagram.png" width="32" class="float-none float-lg-right mx-3">
 						</a>
 						<a href="https://www.facebook.com/gcashofficial/" target="_blank">
-							<img src="assets/images/logos/fb.png" width="32"  class="float-right mx-3">
+							<img src="assets/images/logos/fb.png" width="32"  class="float-none float-lg-right mx-3">
 						</a>
 					</div>
 				</div>
@@ -54,7 +54,7 @@
 						</div>				
 					</div>
 
-					<div class="col-lg col-md-12 order-lg-2 order-1 p-4 p-lg-0">
+					<div class="col-lg col-md-12 order-lg-2 order-1 p-4 p-lg-0 pb-md-0">
 						<div class="iphone"></div>
 					</div>
 
@@ -77,7 +77,7 @@
 						</div>
 					</div>
 
-					<div class="col-lg col-md-12 order-lg-2 order-1 p-4 p-lg-0">
+					<div class="col-lg col-md-12 order-lg-2 order-1 p-4 p-lg-0 pb-md-0">
 						<div class="iphone"></div>
 					</div>
 
@@ -91,7 +91,7 @@
 			</div>
 		</div>
 
-		<div class="section" id="services">
+		<div class="section fp-auto-height-responsive" id="services">
 			<div class="container-fluid h-100">
 				<div class="row justify-content-center">
 					<div class="text-center pt-5">
@@ -99,9 +99,9 @@
 					</div>
 				</div>
 
-				<div class="row h-60 px-lg-5">
+				<div class="row h-60 px-lg-5 d-lg-flex d-none">
 					<div  class="col-lg-4 col-12 mt-3" id="service-1">
-						<div class="d-flex flex-column box align-items-center justify-content-center">
+						<div class="d-flex flex-column box desktop align-items-center justify-content-center">
 							<h4>Send Money</h4>
 							<p class="font-italic">Send money to anywhere in the Philippines!</p>
 
@@ -120,7 +120,7 @@
 					</div>		
 
 					<div  class="col-lg-4 col-12 mt-3" id="service-2">
-						<div class="d-flex flex-column box align-items-center justify-content-center">
+						<div class="d-flex flex-column box desktop align-items-center justify-content-center">
 							<h4>Pay Bills</h4>
 							<p class="font-italic">Easy payments for your monthly dues</p>
 
@@ -139,7 +139,7 @@
 					</div>	
 
 					<div  class="col-lg-4 col-12 mt-3" id="service-3">
-						<div class="d-flex flex-column box align-items-center justify-content-center">
+						<div class="d-flex flex-column box desktop align-items-center justify-content-center">
 							<h4>Book Movies</h4>
 							<p class="font-italic">No need to fall in line!</p>
 
@@ -159,18 +159,84 @@
 					</div>	
 					
 				</div>
+
+				<div class="row h-60 px-lg-5 py-4 py-lg-0 d-lg-none d-flex">
+					<div class="col-lg-4 col-12 mt-3" id="service-1">
+						<div class="d-flex flex-column box mobile align-items-center justify-content-center pb-5">
+							<h4 class="pt-5">Send Money</h4>
+							<p class="font-italic py-1">Send money to anywhere in the Philippines!</p>
+
+							<ol class="align-items-center justify-content-center">
+								<li class="align-items-center mx-auto">Select Send Money</li>
+								<li class="align-items-center mx-auto">Enter the recipient's mobile number or select a contact from your contact list</li>
+								<li class="align-items-center mx-auto">
+									Enter the amount you want to send. You can also write a custom message!
+								</li>
+								<li class="align-items-center mx-auto">
+									Confirm the transaction details		
+								</li>
+								<li class="align-items-center mx-auto">You're done!</li>
+							</ol>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-12 mt-3" id="service-2">
+						<div class="d-flex flex-column box mobile align-items-center justify-content-center pb-5">
+							<h4 class="pt-5">Pay Bills</h4>
+							<p class="font-italic py-1">Easy payments for your monthly dues</p>
+
+							<ol class="align-items-center justify-content-center">
+								<li class="align-items-center mx-auto">Select Pay Bills</li>
+								<li class="align-items-center mx-auto">Select the biller you're going to pay bills to</li>
+								<li class="align-items-center mx-auto">
+									Enter your account reference number and the amount you're going to pay
+								</li>
+								<li class="align-items-center mx-auto">
+									Confirm the transaction details		
+								</li>
+								<li class="align-items-center mx-auto">You're done!</li>
+							</ol>
+						</div>
+					</div>	
+
+					<div  class="col-lg-4 col-12 mt-3" id="service-3">
+						<div class="d-flex flex-column box mobile align-items-center justify-content-center pb-5">
+							<h4 class="pt-5">Book Movies</h4>
+							<p class="font-italic py-1">No need to fall in line!</p>
+
+							<ol class="align-items-center justify-content-center ">
+								<li class="align-items-center mx-auto">Select Book Movies</li>
+								<li class="align-items-center mx-auto">Nominate an email address</li>
+								<li class="align-items-center mx-auto">
+									Select a cinema near you
+								</li>
+								<li class="align-items-center mx-auto">
+									Choose your preferred time and date
+								</li>
+								<li class="align-items-center mx-auto">Choose the seats you want</li>
+								<li class="align-items-center mx-auto">Review details and confirm</li>
+							</ol>
+						</div>
+					</div>
+
+				</div>
+
 			</div>
 		</div>
 
-		<div class="section fp-auto-height" id="download">
+		<div class="section fp-auto-height py-5" id="download">
 			<div class="container-fluid h-100">
-				<div class="row h-100">
+				<div class="row h-100 py-5">
 					<div class="col-lg-12 text-center p-5 py-auto h-100 align-items-center justify-content-center">
 						<h2 class="text-uppercase text-fg">Enjoy all these and more!</h2>
 						<h1 class="text-bg">#GCashMoNaYan</h1>
 						<p>Just download the GCash App on your phone and create a free account to enjoy cashless transactions.</p>
-						<img src="assets/images/appstore-badge-1.png" width="140" class="mx-1 mt-4">
-						<img src="assets/images/playstore-badge-1.png" width="140" class="mx-1 mt-4">
+						<a href="https://bit.ly/GCashiOS">
+							<img src="assets/images/appstore-badge-1.png" width="140" class="mx-1 mt-lg-4 mt-2">
+						</a>
+						<a href="https://bit.ly/GCashAndroid">
+							<img src="assets/images/playstore-badge-1.png" width="140" class="mx-1 mt-lg-4 mt-2">
+						</a>
 					</div>
 				</div>
 
@@ -197,7 +263,7 @@
 			navigationPosition: 'right',
 			keyboardScrolling: true,
 			controlArrows: true,
-			responsiveWidth: 769,
+			responsiveWidth: 990,
 			onLeave: function (origin, destination, direction) {
 				if (destination.index == 1 || destination.index == 4) {
 			        $('#fp-nav ul li a.active span').removeClass("active-blue-dots blue-dots").addClass("active-blue-dots");
@@ -215,7 +281,7 @@
 	</script>
 
 	<script type="text/javascript">
-		$(".box").hover(function(){
+		$(".box.desktop").hover(function(){
 			$(this).find('p, ol').slideToggle();
 		});
 
