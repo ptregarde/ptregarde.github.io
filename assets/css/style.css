@@ -478,12 +478,19 @@ img.btn{
 
 .box.desktop{
     height: 130%;
+    -webkit-clip-path: polygon(
+      0% 14%,
+      100% 14%,
+      100% 86%,
+      0% 86%
+    );
     clip-path: polygon(
       0% 14%,
       100% 14%,
       100% 86%,
       0% 86%
     );
+
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 
