@@ -259,6 +259,8 @@ body, html {
     background: url(../images/screen-platform-270.png) center center no-repeat fixed;
     -webkit-animation: changeScreen 10s;
     -moz-animation: changeScreen 10s;
+    -ms-transform: changeScreen 10s;
+    -o-animation:changeScreen 10s;
     animation: changeScreen 10s;
 }
 
@@ -289,25 +291,33 @@ body, html {
 
 .benefit.fadeIn .heading{
 	-webkit-animation: fadeFromLeft 0.75s;
-	-moz-animation: fadeFromLeft 0.75s;
+    -moz-animation: fadeFromLeft 0.75s;
+    -ms-animation: fadeFromLeft 0.75s;
+    -o-animation: fadeFromLeft 0.75s;
 	animation: fadeFromLeft 0.75s;
 }
 
 .benefit.fadeIn .description{
 	-webkit-animation: fadeFromRight 0.75s;
 	-moz-animation: fadeFromRight 0.75s;
+    -ms-animation: fadeFromRight 0.75s;
+    -o-animation: fadeFromRight 0.75s;
 	animation: fadeFromRight 0.75s;
 }
 
 .benefit.fadeOut .heading{
 	-webkit-animation: fadeToLeft 0.75s;
-	-moz-animation: fadeToLeft 0.75s;
+    -moz-animation: fadeToLeft 0.75s;
+    -ms-animation: fadeToLeft 0.75s;
+	-o-animation: fadeToLeft 0.75s;
 	animation: fadeToLeft 0.75s;
 }
 
 .benefit.fadeOut .description{
 	-webkit-animation: fadeToRight 0.75s;
-	-moz-animation: fadeToRight 0.75s;
+    -moz-animation: fadeToRight 0.75s;
+    -ms-animation: fadeToRight 0.75s;
+	-o-animation: fadeToRight 0.75s;
 	animation: fadeToRight 0.75s;
 }
 
