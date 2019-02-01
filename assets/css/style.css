@@ -235,12 +235,9 @@ body, html {
     position: relative;
 }
 
-.header .logo .col{
+.header .logo .col#logo{
     background: url(../images/logo.png) no-repeat;
-}
-
-.header h1{
-    /*font-size: 72px;*/
+    background-position: 0% 50%; 
 }
 
 .benefit{
@@ -386,42 +383,6 @@ body, html {
 
 }
 
-
-.services-1 {
-    background: url(../images/services-bg.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-
-.services-1::before{
-    background: rgba(0,0,0, 0.5);
-    content: '';
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-.services-2{
-    background: url(../images/send-money.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-.services-3{
-    background: url(../images/pay-bills.jpg);
-    background-size: cover;
-    background-position: 70%;
-}
-
-.services-4{
-    background: url(../images/book-movies.jpg);
-    background-size: cover;
-    background-position: 70%;
-}
-
 .h-10{
     height: 10%;
 }
@@ -434,6 +395,10 @@ body, html {
     height: 60%;
 }
 
+.w-70{
+    width: 70%;
+}
+
 img.btn{
     width: 90px;
 }
@@ -441,8 +406,8 @@ img.btn{
 .circle{
     border: 1px solid #48aee0;
     background-color: #48aee0;
-    height: 100%;
-    width: 100%;
+    height: 64px;
+    width: 64px;
     position: absolute;
     z-index: 0;
 }
@@ -451,19 +416,6 @@ img.btn{
     width: 100px;
     height: 100px;
     position: relative;
-}
-
-
-#button1, 
-#button2, 
-#button3, 
-#button4 {
-    position: relative;
-}
-
-#right{
-    background-color: #f5fffa;
-
 }
 
 #services{
@@ -490,6 +442,15 @@ img.btn{
 #services h4,
 #services p{
     color: #fff;
+    position: relative;
+}
+
+#services h4{
+    font-size: 36px;
+}
+
+#services p{
+    font-weight: 100;
 }
 
 #service-1 .box{
@@ -537,12 +498,22 @@ img.btn{
 
 .box:hover::before{
     background: rgba(0,0,0,0);
+    height: 100%;
+}
+
+.box:hover h4{
+    font-size: 48px !important;
+}
+
+.box:hover h4{
+        border-bottom: 2px solid #266BDD;
+
 }
 
 #services ol {
     list-style: none;
     counter-reset: custom-counter;
-    flex: wrap;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     color: #fff;
@@ -551,22 +522,37 @@ img.btn{
 #services ol li{
     counter-increment:  custom-counter;
     display: flex;
-    width: 80%;
+    width: 60%;
     font-size: 0.8rem;
     margin-bottom: 0.5rem;
 }
 
 #services ol li::before{
+    color: antiquewhite;
     content: "0" counter(custom-counter);
     font-weight: bold;
     font-size: 3rem;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
     line-height: 1;
+}
+
+.text-bg{
+    font-size: 150px;
+    color: #ccf2ff;
+    font-style: italic;
+}
+
+.mt-n6{
+    margin-top: -5.5rem !important;
+}
+
+.text-fg{
+    color: #3a3a3a;
 }
 
 @media (max-width: 992px) { 
 
-    .header .logo .col{
+    .header #logo{
        background-position: center;
        background-size: 50%;
     }
