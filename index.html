@@ -99,7 +99,7 @@
 					</div>
 				</div>
 
-				<div class="row h-60 px-lg-5 d-lg-flex d-none">
+				<div class="row h-60 px-lg-5 d-lg-flex d-none" id="desktop">
 					<div  class="col-lg-4 col-12 mt-3" id="service-1">
 						<div class="d-flex flex-column box desktop align-items-center justify-content-center">
 							<h4>Send Money</h4>
@@ -160,7 +160,7 @@
 					
 				</div>
 
-				<div class="row h-60 px-lg-5 py-4 py-lg-0 d-lg-none d-flex">
+				<div class="row h-60 px-lg-5 py-4 py-lg-0 d-lg-none d-flex" id="mobile">
 					<div class="col-lg-4 col-12 mt-3" id="service-1">
 						<div class="d-flex flex-column box mobile align-items-center justify-content-center pb-5">
 							<h4 class="pt-5">Send Money</h4>
@@ -284,6 +284,16 @@
 		$(".box.desktop").hover(function(){
 			$(this).find('p, ol').slideToggle();
 		});
+
+		var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+		var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+
+		// if (isChrome) {
+		// }
+
+		if (isSafari) {
+			$("#mobile").removeClass('d-lg-none d-flex').addClass('d-flex');
+		}
 
 	</script>
 
