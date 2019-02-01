@@ -409,6 +409,10 @@ body, html {
     width: 70%;
 }
 
+.w-90{
+    width: 90%;
+}
+
 img.btn{
     width: 90px;
 }
