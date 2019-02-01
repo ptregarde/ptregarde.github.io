@@ -492,15 +492,31 @@ img.btn{
     );
 
     -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
     filter: grayscale(100%);
 
+    -webkit-animation: clipOut 4s;
+    -moz-animation: clipOut 4s;
+    -ms-animation: clipOut 4s;
+    -o-animation: clipOut 4s;
     animation: clipOut 4s;
+
+    -webkit-transition: -webkit-clip-path 1s ease-in, -webkit-filter 0.5s ease-in;
+    -moz-transition: clip-path 1s ease-in, -moz-filter 0.5s ease-in;
+    -ms-transition: clip-path 1s ease-in, -ms-filter 0.5s ease-in;
+    -o-transition: clip-path 1s ease-in, -o-filter 0.5s ease-in;
     transition: clip-path 1s ease-in, filter 0.5s ease-in;
 }
 
 .box.desktop:hover{
+    -webkit-clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
     clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
     -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
     filter: none;
 }
 
@@ -524,7 +540,7 @@ img.btn{
 }
 
 .box.desktop:hover h4{
-        border-bottom: 2px solid #266BDD;
+    border-bottom: 2px solid #266BDD;
 
 }
 
